@@ -6,7 +6,21 @@ print('REMEMBER para relembrar os comandos')
 print('UPDATE para atualizar um projeto.')
 print('DELETE para remover um projeto')
 import datetime
-lista =[]
+import json
+ARQUIVO = "dados.json"
+
+def carregar_dados():
+    try:
+        with open(ARQUIVO, "r") as f:
+            return json.load(f)
+    except:
+        return []
+
+def salvar_dados(lista):
+    with open(ARQUIVO, "w") as f:
+        json.dump(lista, f, indent=4, default=str)
+
+lista = carregar_dados()
 
 while True:
     def procurar_projeto_lista(nome, lista):
@@ -33,6 +47,8 @@ while True:
 
 
                 lista.append(cadastro_projeto)
+        salvar_dados(lista)
+
     def listar_projetos():
         if lista == []:
             print('Não há nenhum projeto registrado no momento, digite o comando ADD para adicionar um projeto.')
@@ -89,6 +105,7 @@ while True:
             data_mudanca = datetime.datetime.now()
             entrada_atualizacao = (data_mudanca,projeto_modificar['nome'], projeto_modificar['status'])
             projeto_modificar['historico'].append(entrada_atualizacao)
+            salvar_dados(lista)
 
 
         else:

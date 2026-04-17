@@ -1,3 +1,14 @@
-# Lista_de_tarefas_python
-Uma lista de tarefas para utilizar da maneira que quiser, pode ser uma lista de tarefas ou uma lista de sonhos, metas, etc, ainda em desenvolvimento.
-Com disponibilidade de adicionar, atualizar nome e status de um projeto, remover, listar, relembrar comandos, pedir informações sobre o usúario.
+# Gerenciador de Projetos com JSON
+
+Sistema em Python com funcionalidades de:
+- Cadastro de projetos
+- Edição e remoção
+- Listagem
+- Persistência de dados em JSON
+
+## Tecnologias
+- Python
+
+## Como executar
+1. Baixe o projeto
+2. Execute o arquivo main.py

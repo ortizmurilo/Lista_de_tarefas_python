@@ -8,6 +8,7 @@ Sistema em Python com funcionalidades de:
 
 ## Tecnologias
 - Python
+- Manipulação de arquivos (JSON)
 
 ## Como executar
 1. Baixe o projeto
